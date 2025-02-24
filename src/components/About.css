@@ -1,0 +1,82 @@
+.about {
+  background-color: #000;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Remove any separate h2 styling so all text is handled in .text-content */
+}
+
+.about-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image-container {
+  position: absolute;
+  top: 20%;  /* Reduced from 50% to move images higher, covering "About Me" initially */
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-out, top 0.3s ease-out; /* Add transition for top */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Images on top initially */
+}
+
+.image-container img {
+  width: 500px;  /* Kept at 300px as per previous checkpoint */
+  height: auto;
+  display: block;
+}
+
+.left-image {
+  right: 50%; /* Positioned just left of center */
+  margin-right: 0;
+}
+
+.right-image {
+  left: 50%; /* Positioned just right of center */
+  margin-left: 0;
+}
+
+.text-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1; /* Behind the images */
+  text-align: center;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem; /* Reduced gap */
+}
+
+.text-content p {
+  font-size: 1em;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.text-content button {
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.text-content button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
