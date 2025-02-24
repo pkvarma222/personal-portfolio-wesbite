@@ -1,0 +1,20 @@
+.header {
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with 80% opacity (0.8) */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+  padding: 1rem 2rem; /* Padding for spacing */
+  position: fixed; /* Keep header at the top of the page */
+  top: 0; /* Align to the top of the viewport */
+  left: 0;
+  width: 100%; /* Span the full width */
+  z-index: 100; /* Ensure header stays on top of other content */
+  font-family: 'Arial', sans-serif; /* Default fallback font */
+  backdrop-filter: blur(5px); /* Add blur effect to the background behind the header */
+  -webkit-backdrop-filter: blur(5px); /* For Safari compatibility */
+}
+
+.header h1 {
+  font-family: 'DM Serif Text', serif; /* Apply DM Serif Text for the header name */
+  font-size: 1.5rem; /* Adjustable size for your name */
+  margin: 0; /* Remove default margin for clean centering */
+}

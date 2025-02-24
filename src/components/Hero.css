@@ -1,20 +1,59 @@
 .hero {
-  height: 100vh;
+  background-color: #000; /* Match the dark background of your portfolio */
+  min-height: 100vh; /* Full viewport height */
+  position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f5f5f5;
-  color: #000;
+  color: #fff; /* White text for contrast */
+  padding-top: 60px; /* Account for the fixed header height (approx. 60px) */
+  overflow: hidden; /* Prevent overflow issues */
 }
 
-.hero h1 {
-  font-size: 4rem;
-  margin: 0;
+.hero-content {
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Match the font from Portfolio.css, can update with Google Fonts */
+  z-index: 5; /* Ensure hero content stays above background but below header (z-index: 100) */
 }
 
-.hero p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  color: #666;
+.hero-content h1 {
+  font-size: 3.5rem; /* Large, bold header */
+  margin-bottom: 0.2rem; /* Reduced from 1rem to decrease space between header and paragraph */
+  font-family: 'DM Serif Text', serif; /* Match header font for consistency, or use Intro Rust Free if preferred */
+  /* Remove default text styling since we’ll handle letters individually */
+  display: inline-block; /* Ensure letters stay inline */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.hero-content p {
+  font-size: 1.2rem; /* Readable paragraph size */
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Animation for individual header letters (raise from bottom and fade in) */
+.header-letter {
+  display: inline-block; /* Ensure each letter is a block for animation */
+  opacity: 0; /* Start hidden */
+  transform: translateY(50px); /* Start 50px below final position */
+  animation: raiseFadeIn 1.5s ease-out forwards; /* Same animation as before, delayed per letter */
+}
+
+/* Animation for paragraph (raise from bottom and fade in, delayed after header) */
+.animate-para {
+  animation: raiseFadeIn 1.5s ease-out 1.5s forwards; /* Delay by 1.5s (total header animation time) */
+  opacity: 0; /* Start hidden */
+  transform: translateY(50px); /* Start 50px below final position */
+}
+
+/* Keyframes for raise from bottom and fade in */
+@keyframes raiseFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

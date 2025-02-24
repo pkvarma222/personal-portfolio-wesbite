@@ -7,7 +7,7 @@ function Contact() {
       <h2>Contact</h2>
       <p>
         Let’s work together—reach out at{' '}
-        <a href="mailto:teamAstrapresents@gmail.com">teamAstrapresents@gmail.com</a>.
+        <a href="mailto:teamAstrapresents@gmail.com"> my email</a>.
       </p>
     </section>
   );
