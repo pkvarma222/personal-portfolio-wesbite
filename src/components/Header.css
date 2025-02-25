@@ -9,8 +9,8 @@
   width: 100%; /* Span the full width */
   z-index: 100; /* Ensure header stays on top of other content */
   font-family: 'Arial', sans-serif; /* Default fallback font */
-  backdrop-filter: blur(5px); /* Add blur effect to the background behind the header */
-  -webkit-backdrop-filter: blur(5px); /* For Safari compatibility */
+  backdrop-filter: blur(10px); /* Add blur effect to the background behind the header */
+  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
 }
 
 .header h1 {

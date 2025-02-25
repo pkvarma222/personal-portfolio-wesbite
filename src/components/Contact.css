@@ -1,22 +1,24 @@
 .contact {
-  padding: 4rem 2rem;
-  background-color: #fff;
+  background-color: #000;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem; /* Add spacing above the contact section */
+  padding-bottom: 2rem; /* Add spacing below the contact section */
+  min-height: 100vh; /* Fixed height to ensure full viewport and prevent collapse */
+  color: #fff; /* White text for contrast */
 }
 
 .contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .contact p {
-  font-size: 1.2rem;
-}
-
-.contact a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center;
 }

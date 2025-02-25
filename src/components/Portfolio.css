@@ -1,10 +1,12 @@
 .portfolio {
   background-color: #000;
-  min-height: 100vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-top: 2rem; /* Add spacing above the portfolio section */
+  padding-bottom: 2rem; /* Add spacing below the portfolio section */
+  min-height: 100vh; /* Fixed height to ensure full viewport and prevent collapse */
   /* Remove any separate h2 styling so all text is handled in .text-content */
 }
 
@@ -13,22 +15,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  /* Remove height: 100% and min-height to auto-adjust within min-height: 100vh */
 }
 
 .image-container {
   position: absolute;
-  top: 20%;  /* Reduced from 50% to move images higher, covering "Work" initially */
+  top: 20%; /* Maintained to position images higher, covering "FILMMAKER" initially */
   transform: translateY(-50%);
   transition: transform 0.3s ease-out, top 0.3s ease-out; /* Add transition for top */
-  border-radius: 10px;
+  border-radius: 0; /* Removed rounded corners to eliminate borders */
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 10; /* Images on top initially */
 }
 
 .image-container img {
-  width: 500px;  /* Kept at 300px as per previous checkpoint */
+  width: 500px; /* Kept at 500px as per your checkpoint */
   height: auto;
   display: block;
 }
@@ -70,7 +72,7 @@
   border: 2px solid #fff;
   color: #fff;
   padding: 10px 20px;
-  border-radius: 20px;
+  border-radius: 0; /* Removed rounded corners to eliminate borders */
   cursor: pointer;
   font-size: 1rem;
   text-transform: uppercase;

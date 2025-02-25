@@ -1,24 +1,38 @@
 .hero {
-  background-color: #000; /* Match the dark background of your portfolio */
-  min-height: 100vh; /* Full viewport height */
+  background-color: #000; /* Fallback background if video fails to load */
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff; /* White text for contrast */
   padding-top: 60px; /* Account for the fixed header height (approx. 60px) */
+  padding-bottom: 0rem; /* Add spacing below the hero section */
+  min-height: 70vh; /* Fixed height to ensure full viewport and prevent collapse with other sections */
   overflow: hidden; /* Prevent overflow issues */
+}
+
+.hero-video {
+  position: absolute;
+  top: 50; /* Align to the top of the hero section */
+  left: 50; /* Align to the left of the hero section */
+  width: 90%; /* Occupy 100% of the window width */
+  height: auto; /* Occupy 100% of the hero height (auto-adjusted within 100vh) */
+  object-fit: cover; /* Scale video to cover the area while maintaining aspect ratio */
+  z-index: 1; /* Behind the hero-content (z-index: 5) */
+  opacity: 0.8; /* Slightly reduce video opacity for better text readability */
+  border-radius: 20px; /* Add rounded edges to all four corners of the video */
 }
 
 .hero-content {
   text-align: center;
   font-family: 'Arial', sans-serif; /* Match the font from Portfolio.css, can update with Google Fonts */
-  z-index: 5; /* Ensure hero content stays above background but below header (z-index: 100) */
+  z-index: 5; /* Ensure hero content stays above video but below header (z-index: 100) */
+  position: relative; /* Ensure z-index works correctly */
 }
 
 .hero-content h1 {
   font-size: 3.5rem; /* Large, bold header */
-  margin-bottom: 0.2rem; /* Reduced from 1rem to decrease space between header and paragraph */
+  margin-bottom: 0.5rem; /* Reduced space between header and paragraph */
   font-family: 'DM Serif Text', serif; /* Match header font for consistency, or use Intro Rust Free if preferred */
   /* Remove default text styling since we’ll handle letters individually */
   display: inline-block; /* Ensure letters stay inline */
@@ -27,7 +41,7 @@
 
 .hero-content p {
   font-size: 1.2rem; /* Readable paragraph size */
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   line-height: 1.6;
 }
 
