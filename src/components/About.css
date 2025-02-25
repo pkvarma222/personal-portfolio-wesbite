@@ -20,8 +20,8 @@
 
 .image-container {
   position: absolute;
-  top: 20%; /* Maintained to position images higher, covering "About Me" initially */
-  transform: translateY(-50%);
+  top: 0%; /* Maintained to position images higher, covering "About Me" initially */
+  transform: translateY(-100%);
   transition: transform 0.3s ease-out, top 0.3s ease-out; /* Add transition for top */
   border-radius: 0; /* Removed rounded corners to eliminate borders */
   overflow: hidden;
@@ -30,7 +30,7 @@
 }
 
 .image-container img {
-  width: 300px; /* Kept at 300px as per previous checkpoint */
+  width: 500px; /* Kept at 300px as per previous checkpoint */
   height: auto;
   display: block;
 }
@@ -79,7 +79,7 @@
   border: 2px solid #fff;
   color: #fff;
   padding: 10px 20px;
-  border-radius: 0; /* Removed rounded corners to eliminate borders */
+  border-radius: 20px; /* Removed rounded corners to eliminate borders */
   cursor: pointer;
   font-size: 1rem;
   text-transform: uppercase;
