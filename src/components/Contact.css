@@ -7,13 +7,16 @@
   align-items: center;
   padding-top: 2rem; /* Add spacing above the contact section */
   padding-bottom: 2rem; /* Add spacing below the contact section */
-  min-height: 10vh; /* Fixed height to ensure full viewport and prevent collapse */
+  min-height: 5vh; /* Fixed height to ensure full viewport and prevent collapse */
   color: #fff; /* White text for contrast */
+  overflow: hidden; /* Prevent horizontal overflow */
+  max-width: 100vw; /* Ensure no overflow beyond viewport width */
 }
 
 .contact h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
 .contact p {
@@ -21,4 +24,24 @@
   margin-bottom: 2rem;
   text-transform: uppercase;
   text-align: center;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+/* Mobile-specific styles (max-width: 768px for tablets and phones) */
+@media (max-width: 768px) {
+  .contact {
+    min-height: 0.1vh; /* Increase height for mobile to ensure content fits */
+    padding-top: 1rem; /* Reduce padding for tighter layout */
+    padding-bottom: 1rem;
+  }
+
+  .contact h2 {
+    font-size: 0.8rem; /* Smaller heading on mobile */
+    margin-bottom: 0rem; /* Adjust spacing on mobile */
+  }
+
+  .contact p {
+    font-size: 0.5rem; /* Smaller paragraph on mobile */
+    margin-bottom: 1rem; /* Adjust spacing on mobile */
+  }
 }

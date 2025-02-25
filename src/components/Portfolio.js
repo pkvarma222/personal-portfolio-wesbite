@@ -32,6 +32,19 @@ function Portfolio() {
         progress = (upperThreshold - sectionMid) / (upperThreshold - lowerThreshold);
       }
 
+      // New condition added (inserted before or after the above, depending on context)
+      const documentHeight = document.documentElement.scrollHeight; // Total height of the webpage
+      const scrollPosition = window.scrollY + windowHeight; // Current scroll position plus viewport height
+      const atPageEnd = scrollPosition >= documentHeight - 100; // Check if within 100px of the bottom
+
+      if (atPageEnd || sectionMid <= lowerThreshold) {
+        progress = 1; // Fully slide and rotate when at center or page end
+      } else if (sectionMid >= upperThreshold) {
+        progress = 0; // Images together, no slide or rotation at top
+      } else {
+        progress = (upperThreshold - sectionMid) / (upperThreshold - lowerThreshold);
+      }
+
       // Calculate maximum translation so that at progress=1 each image slides out enough 
       // to reveal the text (with a 15% margin)
       const imageWidth = leftImage.offsetWidth;

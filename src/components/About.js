@@ -20,14 +20,27 @@ function About() {
       // Use the section's vertical midpoint to control progress:
       // When the midpoint is at 70% of the viewport, progress = 0 (images together, 0deg rotation)
       // When the midpoint is at 50% (center), progress = 1 (images apart, 30deg rotation)
-      const upperThreshold = windowHeight * 0.70;
-      const lowerThreshold = windowHeight / 2;
+      const upperThreshold = windowHeight * 0.90;
+      const lowerThreshold = windowHeight * 0.70;
       const sectionMid = rect.top + rect.height / 2;
       let progress = 0;
       if (sectionMid <= lowerThreshold) {
         progress = 1;
       } else if (sectionMid >= upperThreshold) {
         progress = 0;
+      } else {
+        progress = (upperThreshold - sectionMid) / (upperThreshold - lowerThreshold);
+      }
+
+      // New condition added (inserted before or after the above, depending on context)
+      const documentHeight = document.documentElement.scrollHeight; // Total height of the webpage
+      const scrollPosition = window.scrollY + windowHeight; // Current scroll position plus viewport height
+      const atPageEnd = scrollPosition >= documentHeight - 100; // Check if within 100px of the bottom
+
+      if (atPageEnd || sectionMid <= lowerThreshold) {
+        progress = 1; // Fully slide and rotate when at center or page end
+      } else if (sectionMid >= upperThreshold) {
+        progress = 0; // Images together, no slide or rotation at top
       } else {
         progress = (upperThreshold - sectionMid) / (upperThreshold - lowerThreshold);
       }
