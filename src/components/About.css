@@ -30,7 +30,7 @@
 }
 
 .image-container img {
-  width: 500px; /* Kept at 300px as per previous checkpoint */
+  width: 400px; /* Kept at 300px as per previous checkpoint */
   height: auto;
   display: block;
 }
@@ -58,19 +58,15 @@
 
 .text-content h2 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem; /* Reduced gap */
-}
-
-.text-content h3 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem; /* Reduced gap */
-  font-weight: bold;
-  text-transform: uppercase;
+  margin-bottom: 2rem; /* Reduced gap */
 }
 
 .text-content p {
   font-size: 1rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   text-transform: uppercase;
 }
 

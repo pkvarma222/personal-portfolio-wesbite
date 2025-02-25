@@ -16,10 +16,10 @@ function About() {
       const rect = section.getBoundingClientRect();
       const windowHeight = window.innerHeight;
       const windowWidth = window.innerWidth;
-
+      
       // Use the section's vertical midpoint to control progress:
-      // When the midpoint is at 70% of the viewport, progress = 0 (images fully cover text)
-      // When the midpoint is at 50% (center), progress = 1 (images slid aside)
+      // When the midpoint is at 70% of the viewport, progress = 0 (images together, 0deg rotation)
+      // When the midpoint is at 50% (center), progress = 1 (images apart, 30deg rotation)
       const upperThreshold = windowHeight * 0.70;
       const lowerThreshold = windowHeight / 2;
       const sectionMid = rect.top + rect.height / 2;
@@ -31,15 +31,21 @@ function About() {
       } else {
         progress = (upperThreshold - sectionMid) / (upperThreshold - lowerThreshold);
       }
-
+      
       // Calculate maximum translation so that at progress=1 each image slides out enough 
       // to reveal the text (with a 15% margin)
       const imageWidth = leftImage.offsetWidth;
       const margin = windowWidth * 0.15;
       const maxTranslate = (((windowWidth / 2) - margin) - (imageWidth / 2)) / windowWidth * 100;
+      
+      // Calculate rotation angle (0deg to 15deg based on progress)
+      const rotationAngle = progress * 5; // Linear interpolation from 0deg to 30deg
 
-      leftImage.style.transform = `translateX(-${progress * maxTranslate}vw)`;
-      rightImage.style.transform = `translateX(${progress * maxTranslate}vw)`;
+      // Apply both translation (slide) and rotation (rotate) to images
+      // Left image slides left and rotates counterclockwise (0deg to -30deg)
+      leftImage.style.transform = `translateX(-${progress * maxTranslate}vw) rotate(-${rotationAngle}deg)`;
+      // Right image slides right and rotates clockwise (0deg to 30deg)
+      rightImage.style.transform = `translateX(${progress * maxTranslate}vw) rotate(${rotationAngle}deg)`;
       leftImage.style.zIndex = '10';
       rightImage.style.zIndex = '10';
     };
@@ -55,7 +61,7 @@ function About() {
       <div className="text-content">
         <h2>GRAPHIC DESIGNER</h2>
         <p>Thanks to my cousin, I joined in a class to learn Photoshop and Illustrator during a summer in high school. Thus began my journey on making logos, graphics and posters.</p>
-        <button>Featured designs</button>
+        <button>Featured Designs</button>
       </div>
       {/* Image overlay that covers the text initially */}
       <div className="about-content">

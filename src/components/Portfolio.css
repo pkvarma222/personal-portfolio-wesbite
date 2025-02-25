@@ -6,7 +6,7 @@
   justify-content: center;
   padding-top: 0rem; /* Add spacing above the portfolio section */
   padding-bottom: 0rem; /* Add spacing below the portfolio section */
-  min-height: 50vh; /* Fixed height to ensure full viewport and prevent collapse */
+  min-height: 40vh; /* Fixed height to ensure full viewport and prevent collapse */
   /* Remove any separate h2 styling so all text is handled in .text-content */
 }
 
@@ -30,7 +30,7 @@
 }
 
 .image-container img {
-  width: 500px; /* Kept at 500px as per your checkpoint */
+  width: 400px; /* Kept at 500px as per your checkpoint */
   height: auto;
   display: block;
 }
@@ -58,12 +58,15 @@
 
 .text-content h2 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem; /* Reduced gap */
+  margin-bottom: 1rem; /* Reduced gap */
 }
 
 .text-content p {
   font-size: 1rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   text-transform: uppercase;
 }
 
