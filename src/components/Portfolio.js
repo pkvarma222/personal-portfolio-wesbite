@@ -39,7 +39,7 @@ function Portfolio() {
       const maxTranslate = (((windowWidth / 2) - margin) - (imageWidth / 2)) / windowWidth * 100;
 
       // Calculate rotation angle (0deg to 15deg based on progress)
-      const rotationAngle = progress * 5; // Linear interpolation from 0deg to 30deg
+      const rotationAngle = progress * 4; // Linear interpolation from 0deg to 30deg
 
       // Apply both translation (slide) and rotation (rotate) to images
       // Left image slides left and rotates counterclockwise (0deg to -30deg)
@@ -60,16 +60,16 @@ function Portfolio() {
       {/* Combined text container for all headings/text */}
       <div className="text-content">
         <h2>FILMMAKER</h2>
-        <p>I was often told that I have been narrating my own stories since I have been 10. Years later I picked up films as my choice of visualizing these stories</p>
+        <p>I was often told that I have been narrating my own stories since I have been ten. Years later I picked up films as my choice of visualizing these stories</p>
         <button>Featured Works</button>
       </div>
       {/* Image overlay that covers the text initially */}
       <div className="portfolio-content">
         <div ref={leftImageRef} className="image-container left-image">
-          <img src="https://cdn.prod.website-files.com/60eeb025115a75902b86a796/647e3cc83822b06137a15c00_Header%201%20Left.jpg" alt="Project 1" />
+          <img src="/images/knock-knock-bang.jpg" alt="Project 1" />
         </div>
         <div ref={rightImageRef} className="image-container right-image">
-          <img src="https://cdn.prod.website-files.com/60eeb025115a75902b86a796/647e3cc83822b06137a15c00_Header%201%20Left.jpg" alt="Project 2" />
+          <img src="/images/ninnu-cheraga.jpg" alt="Project 2" />
         </div>
       </div>
     </section>

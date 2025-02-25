@@ -18,17 +18,16 @@ function Hero() {
         const span = document.createElement('span');
         span.textContent = letter === ' ' ? '\u00A0' : letter; // Use non-breaking space for spaces
         span.className = 'header-letter';
-        span.style.animationDelay = `${index * 0.1}s`; // 0.1s delay per letter for a staggered effect
+        span.style.animationDelay = `${index * 0.025}s`; // 0.025s delay per letter for a staggered effect
         header.appendChild(span);
       });
       hasAnimated.current = true; // Mark as animated to prevent re-animation
     }
 
-    // Trigger animation for paragraph (delayed after header) only on first load
+    // Trigger animation for paragraph (fade in and rise together)
     const para = paraRef.current;
-    if (para && !hasAnimated.current) {
-      para.classList.add('animate-para');
-      hasAnimated.current = true; // Mark as animated
+    if (para) {
+      para.classList.add('animate-para'); // Apply animation for entire paragraph
     }
 
     // Ensure video plays automatically and starts muted
@@ -64,7 +63,7 @@ function Hero() {
       </video>
       <div className="hero-content">
         <h1 ref={headerRef}>Hi, I am Pramod</h1>
-        <p ref={paraRef}>
+        <p ref={paraRef} className="animate-para">
           Filmmaker & Graphic Designer
         </p>
       </div>

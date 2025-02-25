@@ -39,7 +39,7 @@ function About() {
       const maxTranslate = (((windowWidth / 2) - margin) - (imageWidth / 2)) / windowWidth * 100;
       
       // Calculate rotation angle (0deg to 15deg based on progress)
-      const rotationAngle = progress * 5; // Linear interpolation from 0deg to 30deg
+      const rotationAngle = progress * 2.5; // Linear interpolation from 0deg to 30deg
 
       // Apply both translation (slide) and rotation (rotate) to images
       // Left image slides left and rotates counterclockwise (0deg to -30deg)

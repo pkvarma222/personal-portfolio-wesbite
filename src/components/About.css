@@ -1,10 +1,20 @@
+/* Import Custom Fonts */
+@font-face {
+  font-family: 'Arsenica';
+  src: url('../assets/fonts/ArsenicaTrial-Demibold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Chapaza';
+  src: url('../assets/fonts/Chapaza.ttf') format('truetype');
+}
+
 .about {
   background-color: #000;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 2rem; /* Add spacing above the about section */
+  padding-top: 4rem; /* Add spacing above the about section */
   padding-bottom: 2rem; /* Add spacing below the about section */
   min-height: 100vh; /* Fixed height to ensure full viewport and prevent collapse */
   /* Remove any separate h2 styling so all text is handled in .text-content */
@@ -20,7 +30,7 @@
 
 .image-container {
   position: absolute;
-  top: 0%; /* Maintained to position images higher, covering "About Me" initially */
+  top: -100%; /* Maintained to position images higher, covering "About Me" initially */
   transform: translateY(-100%);
   transition: transform 0.3s ease-out, top 0.3s ease-out; /* Add transition for top */
   border-radius: 0; /* Removed rounded corners to eliminate borders */
@@ -30,17 +40,19 @@
 }
 
 .image-container img {
-  width: 400px; /* Kept at 300px as per previous checkpoint */
+  width: 600px; /* Kept at 300px as per previous checkpoint */
   height: auto;
   display: block;
 }
 
 .left-image {
+  margin-top: -20rem;
   right: 50%; /* Positioned just left of center */
   margin-right: 0;
 }
 
 .right-image {
+  margin-top: -20rem;
   left: 50%; /* Positioned just right of center */
   margin-left: 0;
 }
@@ -57,17 +69,18 @@
 }
 
 .text-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem; /* Reduced gap */
+  font-family: 'Arsenica', serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem; /* Reduced gap */
 }
 
 .text-content p {
-  font-size: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  text-transform: uppercase;
+  font-family: 'Chapaza', serif;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
 }
 
 .text-content button {

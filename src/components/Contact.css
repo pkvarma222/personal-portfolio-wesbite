@@ -7,7 +7,7 @@
   align-items: center;
   padding-top: 2rem; /* Add spacing above the contact section */
   padding-bottom: 2rem; /* Add spacing below the contact section */
-  min-height: 100vh; /* Fixed height to ensure full viewport and prevent collapse */
+  min-height: 10vh; /* Fixed height to ensure full viewport and prevent collapse */
   color: #fff; /* White text for contrast */
 }
 
