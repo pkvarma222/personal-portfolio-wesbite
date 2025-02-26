@@ -76,15 +76,15 @@ function Portfolio() {
       <div className="text-content">
         <h2>FILMMAKER</h2>
         <p>I was often told that I have been narrating my own stories since I have been ten. Years later I picked up films as my choice of visualizing these stories</p>
-        <button onClick={() => navigate('/featured-works')}>Featured Works</button>
+        <button onClick={() => {navigate('/featured-works'); window.scrollTo(0, 0);}}>Featured Works</button>
       </div>
       {/* Image overlay that covers the text initially */}
       <div className="portfolio-content">
         <div ref={leftImageRef} className="image-container left-image">
-          <img src="/images/knock-knock-bang.jpg" alt="Project 1" />
+          <img src={`${process.env.PUBLIC_URL}/images/knock-knock-bang.jpg`} />
         </div>
         <div ref={rightImageRef} className="image-container right-image">
-          <img src="/images/ninnu-cheraga.jpg" alt="Project 2" />
+          <img src={`${process.env.PUBLIC_URL}/images/ninnu-cheraga.jpg`} />
         </div>
       </div>
     </section>

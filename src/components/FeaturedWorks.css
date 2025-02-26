@@ -19,7 +19,7 @@ html, body {
   /* Keep the header fixed in place */
   .featured-works-header {
     position: fixed;
-    top: 50%;
+    top: 42.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -42,7 +42,6 @@ html, body {
     font-family: 'Chapaza', serif;
     font-size: 1.5rem;
     margin: 0;
-    text-transform: uppercase;
     white-space: nowrap;
   }
   

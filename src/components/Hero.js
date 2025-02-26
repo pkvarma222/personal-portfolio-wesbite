@@ -56,9 +56,7 @@ function Hero() {
         loop
         playsInline
       >
-        <source src="/videos/showreel.mp4" type="video/mp4" />
-        <source src="/videos/showreel.webm" type="video/webm" />
-        <source src="/videos/showreel.ogv" type="video/ogg" />
+        <source src={`${process.env.PUBLIC_URL}/videos/showreel.mp4`} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="hero-content">

@@ -11,62 +11,62 @@ function FeaturedWorks() {
     {
       title: 'Voicemail',
       subtitle: 'writer | director | editor | cinematographer | sound designer | colorist',
-      video: '/videos/Voicemail - Teaser.mp4', // Local video from public/videos/
-      poster: '/images/ninnu-cheraga.jpg', // Fallback poster from public/images/
+      video: `${process.env.PUBLIC_URL}/videos/Voicemail - Teaser.mp4`, // Local video from public/videos/
+      poster: `${process.env.PUBLIC_URL}/images/ninnu-cheraga.jpg`, // Fallback poster from public/images/
     },
     {
       title: 'Knock Knock Bang',
       subtitle: 'writer | director | editor | sound designer | colorist',
-      video: '/videos/KKB-Trailer.mp4', // video from google drive
-      poster: '/images/knock-knock-bang.jpg', // Fallback poster from public/images/
+      video: `${process.env.PUBLIC_URL}/videos/KKB-Trailer.mp4`, // video from google drive
+      poster: `${process.env.PUBLIC_URL}/images/knock-knock-bang.jpg`, // Fallback poster from public/images/
     },
     {
       title: 'Prema Prathipadhana Prayasa',
       subtitle: 'writer | director | editor | cinematographer | sound mixer | colorist',
-      video: '/videos/showreel.mp4', // Local video from public/videos/
-      poster: '/images/ninnu-cheraga.jpg', // Fallback poster from public/images/
+      video: `${process.env.PUBLIC_URL}/videos/showreel.mp4`, // Local video from public/videos/
+      poster: `${process.env.PUBLIC_URL}/images/ninnu-cheraga.jpg`, // Fallback poster from public/images/
     },
     {
       title: 'Shine on Us',
       subtitle: 'writer | director | editor | sound mixer | colorist',
-      video: '/videos/showreel.mp4', // Local video from public/videos/
-      poster: '/images/knock-knock-bang.jpg', // Fallback poster from public/images/
+      video: `${process.env.PUBLIC_URL}/videos/showreel.mp4`, // Local video from public/videos/
+      poster: `${process.env.PUBLIC_URL}/images/knock-knock-bang.jpg`, // Fallback poster from public/images/
     },
     {
       title: 'Alright',
       subtitle: 'writer | director | editor | cinematographer | sound designer | colorist',
-      video: '/videos/ninnu-cheraga.mp4', // Local video from public/videos/
-      poster: '/images/ninnu-cheraga.jpg', // Fallback poster from public/images/
+      video: `${process.env.PUBLIC_URL}/videos/ninnu-cheraga.mp4`, // Local video from public/videos/
+      poster: `${process.env.PUBLIC_URL}/images/ninnu-cheraga.jpg`, // Fallback poster from public/images/
     },
     {
       title: 'El Amigo Perdido',
       subtitle: 'writer | director | editor',
-      video: '/videos/knock-knock-bang.mp4', // Local video from public/videos/
-      poster: '/images/knock-knock-bang.jpg', // Fallback poster from public/images/
+      video: `${process.env.PUBLIC_URL}/videos/knock-knock-bang.mp4`, // Local video from public/videos/
+      poster: `${process.env.PUBLIC_URL}/images/knock-knock-bang.jpg`, // Fallback poster from public/images/
     },
     {
       title: 'Finds You',
       subtitle: 'writer | director | editor | cinematographer',
-      video: '/videos/FindsYou-teaser.mp4', // Local video from public/videos/
-      poster: '/images/ninnu-cheraga.jpg', // Fallback poster from public/images/
+      video: `${process.env.PUBLIC_URL}/videos/FindsYou-teaser.mp4`, // Local video from public/videos/
+      poster: `${process.env.PUBLIC_URL}/images/ninnu-cheraga.jpg`, // Fallback poster from public/images/
     },
     {
       title: 'Lockdown Conversation',
       subtitle: 'writer | director | editor',
-      video: '/videos/silent-shadows.mp4', // Local video from public/videos/
-      poster: '/images/knock-knock-bang.jpg', // Fallback poster from public/images/
+      video: `${process.env.PUBLIC_URL}/videos/showreel.mp4`, // Local video from public/videos/
+      poster: `${process.env.PUBLIC_URL}/images/knock-knock-bang.jpg`, // Fallback poster from public/images/
     },
     {
       title: 'Oke Oo Roopam - Unfinished',
       subtitle: 'writer | director | editor | cinematographer | sound designer | colorist',
-      video: '/videos/ninnu-cheraga.mp4', // Local video from public/videos/
-      poster: '/images/ninnu-cheraga.jpg', // Fallback poster from public/images/
+      video: `${process.env.PUBLIC_URL}/videos/showreel.mp4`, // Local video from public/videos/
+      poster: `${process.env.PUBLIC_URL}/images/ninnu-cheraga.jpg`, // Fallback poster from public/images/
     },
     {
       title: 'Ninnu Cheraga - Shelved',
       subtitle: 'writer | director | editor | cinematographer | sound designer | colorist',
-      video: '/videos/NC-teaser2.mp4', // Local video from public/videos/
-      poster: '/images/knock-knock-bang.jpg', // Fallback poster from public/images/
+      video: `${process.env.PUBLIC_URL}/videos/NC-teaser2.mp4`, // Local video from public/videos/
+      poster: `${process.env.PUBLIC_URL}/images/knock-knock-bang.jpg`, // Fallback poster from public/images/
     },
     // Add more projects as needed
   ];
@@ -120,7 +120,7 @@ function FeaturedWorks() {
   return (
     <div className="featured-works" role="main">
       <header className="featured-works-header" ref={headingRef}>
-        <h1>FILMMAKER</h1>
+        <h1>PRAMOD : THE FILMMAKER</h1>
         <h2>Writer | Director | Editor | Cinematographer | Colorist | Sound Mixer</h2>
       </header>
       <div className="projects-queue" role="list">
