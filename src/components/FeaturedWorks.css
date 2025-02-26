@@ -1,0 +1,229 @@
+/* Prevent horizontal scrolling globally */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Stops horizontal scrolling */
+    width: 100%;
+  }
+  
+  /* Main container */
+  .featured-works {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    max-width: 100vw;
+    position: relative;
+  }
+  
+  /* Keep the header fixed in place */
+  .featured-works-header {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    background: none;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.3s ease; /* Smooth opacity fade */
+  }
+  
+  .featured-works-header h1 {
+    font-family: 'Arsenica', serif;
+    font-size: 3.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  
+  .featured-works-header h2 {
+    font-family: 'Chapaza', serif;
+    font-size: 1.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  
+  /* Scrollable section */
+  .projects-queue {
+    padding-top: 70vh;
+    overflow-y: auto;
+    max-width: 100vw;
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Video cards */
+  .project-card {
+    width: 100%;
+    max-width: 100vw;
+    margin: 5rem auto;
+    cursor: pointer;
+    transition: transform 0.5s ease-out, opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    overflow: hidden; /* Prevent excess width */
+    box-sizing: border-box;
+  }
+  
+  /* First video (center-aligned) */
+  .project-card:nth-child(1) {
+    align-items: center;
+    text-align: left;
+  }
+  
+  /* Even videos (left-aligned) */
+  .project-card:nth-child(2n) {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 10vw;
+    max-width: 100%;
+  }
+  
+  /* Odd videos (right-aligned), except first */
+  .project-card:nth-child(2n+1):not(:first-child) {
+    align-items: flex-end;
+    text-align: left;
+    padding-right: 10vw;
+    max-width: 100%;
+  }
+  
+  /* Video & Poster Styling */
+  .project-video, .project-poster {
+    width: 50%;
+    max-width: 50vw;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+    background: #000;
+  }
+  
+  /* Ensure posters fit inside the video area */
+  .project-poster {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    z-index: 2;
+  }
+  
+  /* Title and Subtitle Styling (Left-aligned for all videos) */
+  .text-container {
+    width: 50%;
+    text-align: left;
+  }
+  
+  .project-title {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .project-subtitle {
+    font-size: 0.5rem;
+    margin-top: 0rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-align: left;
+    width: 100%;
+  }
+  
+  /* Animations for smooth appearance */
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .project-card:nth-child(1) { animation: slideUp 1s ease-out forwards 0.2s; }
+  .project-card:nth-child(2) { animation: slideUp 1s ease-out forwards 0.4s; }
+  .project-card:nth-child(3) { animation: slideUp 1s ease-out forwards 0.6s; }
+  .project-card:nth-child(4) { animation: slideUp 1s ease-out forwards 0.8s; }
+  
+  .project-card:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  /* Back button (top-right corner) */
+  .back-button {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    z-index: 102;
+    pointer-events: auto;
+  }
+  
+  .back-button:hover {
+    opacity: 0.7;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .featured-works-header {
+      padding: 2rem 1rem 1rem; /* Reduced padding for mobile */
+    }
+  
+    .featured-works-header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+  
+    .featured-works-header h2 {
+      font-size: 0.6rem;
+    }
+  
+    .project-video, .project-poster {
+      width: 80%;
+      max-width: 80vw;
+    }
+  
+    /* Scrollable section */
+    .projects-queue {
+      padding-top: 75vh;
+    }
+  
+    /* Ensure videos are centered but text remains left-aligned */
+    .project-card:nth-child(2n) .video-container,
+    .project-card:nth-child(2n+1):not(:first-child) .video-container {
+      justify-content: center;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  
+    .text-container {
+      width: 80%;
+      padding-left: 5vw;
+    }
+  
+    .project-title {
+      font-size: 0.6rem; /* Smaller title on mobile */
+    }
+  
+    .project-subtitle {
+      font-size: 0.4rem; /* Smaller subtitle on mobile */
+    }
+  }

@@ -1,10 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import './Portfolio.css';
+import { useNavigate } from 'react-router-dom';
 
 function Portfolio() {
   const sectionRef = useRef(null);
   const leftImageRef = useRef(null);
   const rightImageRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -74,7 +76,7 @@ function Portfolio() {
       <div className="text-content">
         <h2>FILMMAKER</h2>
         <p>I was often told that I have been narrating my own stories since I have been ten. Years later I picked up films as my choice of visualizing these stories</p>
-        <button>Featured Works</button>
+        <button onClick={() => navigate('/featured-works')}>Featured Works</button>
       </div>
       {/* Image overlay that covers the text initially */}
       <div className="portfolio-content">
