@@ -20,6 +20,7 @@
   min-height: 100vh; /* Fixed height to ensure full viewport and prevent collapse */
   overflow: hidden; /* Prevent horizontal overflow */
   max-width: 100vw; /* Ensure no overflow beyond viewport width */
+  z-index: 0;
   /* Remove any separate h2 styling so all text is handled in .text-content */
 }
 
@@ -39,7 +40,7 @@
   border-radius: 0; /* Removed rounded corners to eliminate borders */
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 10; /* Images on top initially */
+  z-index: 2; /* Images on top initially */
   max-width: 100%; /* Prevent overflow */
 }
 
@@ -48,6 +49,7 @@
   height: auto;
   display: block;
   max-width: 100%; /* Prevent overflow beyond container */
+  z-index: 2;
 }
 
 .left-image {

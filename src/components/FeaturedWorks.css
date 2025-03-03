@@ -183,11 +183,12 @@ html, body {
   /* Mobile Styles */
   @media (max-width: 768px) {
     .featured-works-header {
+      top: 32.5%;
       padding: 2rem 1rem 1rem; /* Reduced padding for mobile */
     }
   
     .featured-works-header h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-bottom: 0.5rem;
     }
   
@@ -202,7 +203,7 @@ html, body {
   
     /* Scrollable section */
     .projects-queue {
-      padding-top: 75vh;
+      padding-top: 55vh;
     }
   
     /* Ensure videos are centered but text remains left-aligned */

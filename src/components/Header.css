@@ -1,38 +1,35 @@
+/* src/components/Header.css */
+/* src/components/Header.css */
 .header {
-  background-color: rgba(0, 0, 0, 0.8); /* Black background with 80% opacity (0.8) */
-  color: #fff; /* White text for contrast */
-  text-align: center; /* Ensure horizontal centering on desktop and mobile */
-  padding: 1rem 2rem; /* Padding for spacing on desktop */
-  position: fixed; /* Keep header at the top of the page */
-  top: 0; /* Align to the top of the viewport */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
   left: 0;
-  width: 100%; /* Span the full width */
-  z-index: 100; /* Ensure header stays on top of other content */
-  font-family: 'DM Serif Text', serif; /* Use DM Serif Text with serif fallback */
-  backdrop-filter: blur(10px); /* Add blur effect to the background behind the header */
-  -webkit-backdrop-filter: blur(10px); /* For Safari compatibility */
-  display: flex; /* Use flexbox for vertical centering */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  height: 60px; /* Fixed height for desktop */
-  overflow: hidden;
+  width: 100%;
+  z-index: 100;
+  font-family: 'DM Serif Text', serif;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .header h1 {
-  font-size: 1.5rem; /* Base font size for desktop */
-  margin: 0; /* Remove default margin for clean centering */
+  margin: 0;
+  font-size: 1.5rem;
   white-space: nowrap;
 }
 
-/* Mobile-specific styles (max-width: 768px for tablets and phones) */
+
+/* Mobile adjustments remain unchanged */
 @media (max-width: 768px) {
   .header {
-    padding: 0.5rem 1rem; /* Reduce padding on mobile */
-    height: 50px; /* Smaller height for mobile */
-    overflow: hidden;
+    padding: 0.5rem 1rem;
+    height: 50px;
   }
 
   .header h1 {
-    font-size: 1rem; /* Smaller text for mobile readability */
+    font-size: 1rem;
   }
 }
