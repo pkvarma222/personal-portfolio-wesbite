@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/personal-portfolio-wesbite/static/css/main.3256afa0.css",
+    "main.css": "/personal-portfolio-wesbite/static/css/main.d49fc157.css",
     "main.js": "/personal-portfolio-wesbite/static/js/main.5ec16bf6.js",
     "static/js/453.f0db24d8.chunk.js": "/personal-portfolio-wesbite/static/js/453.f0db24d8.chunk.js",
     "static/media/ArsenicaTrial-Demibold.ttf": "/personal-portfolio-wesbite/static/media/ArsenicaTrial-Demibold.6eaa2f683d3b432c4bb1.ttf",
@@ -8,12 +8,12 @@
     "static/media/Andora Modern Serif.otf": "/personal-portfolio-wesbite/static/media/Andora Modern Serif.f2301e17019c15de7703.otf",
     "static/media/Chapaza.ttf": "/personal-portfolio-wesbite/static/media/Chapaza.23707fce9d5aa7b30fd7.ttf",
     "index.html": "/personal-portfolio-wesbite/index.html",
-    "main.3256afa0.css.map": "/personal-portfolio-wesbite/static/css/main.3256afa0.css.map",
+    "main.d49fc157.css.map": "/personal-portfolio-wesbite/static/css/main.d49fc157.css.map",
     "main.5ec16bf6.js.map": "/personal-portfolio-wesbite/static/js/main.5ec16bf6.js.map",
     "453.f0db24d8.chunk.js.map": "/personal-portfolio-wesbite/static/js/453.f0db24d8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3256afa0.css",
+    "static/css/main.d49fc157.css",
     "static/js/main.5ec16bf6.js"
   ]
 }
