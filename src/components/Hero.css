@@ -11,7 +11,8 @@
 
 .hero {
   position: relative;
-  background-color: #000;
+  background-color: #f2f2f2; /* Light background */
+  color: #1C1B1A;            /* Base text */
   min-height: 75vh;
   overflow: hidden;
   padding-top: 60px;
@@ -27,9 +28,19 @@
   height: auto;
   object-fit: cover;
   z-index: 1;
-  opacity: 0.8;
+  opacity: 1;
   border-radius: 20px;
   max-width: 100%; /* Prevent overflow beyond parent */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(250, 247, 242, 0.6); /* Light neutral tint to blend video with site */
+  z-index: 2;
 }
 
 .hero-content {
@@ -37,13 +48,14 @@
   position: relative;
   text-align: center;
   margin-top: 270px; /* Adjust as needed to initially center content */
+  z-index: 2;
 }
 
 /* Hero Heading (H1) */
 .hero-content h1 {
   margin-bottom: 0rem;
   font-family: 'Andora Modern Serif', serif;
-  color: #fff;
+  color: #f2f2f2;
   z-index: 700;
   white-space: nowrap; /* Prevent text wrapping */
 }
@@ -55,12 +67,13 @@
   line-height: 1.6;
   font-family: 'Andora Modern Serif', serif; /* Updated from Andora Modern Script to match your current code */
   white-space: nowrap; /* Prevent text wrapping */
+  color: #f2f2f2;
 }
 
 .hero-subtitle {
   margin: 0;
   font-size: 1.2rem;
-  color: #fff;
+  color: #FAF7F2;
 }
 
 /* Fixed header background shown when sticky */
@@ -111,7 +124,7 @@
   right: 95px;
   z-index: 6;
   background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  color: #1C1B1A;
   border: none;
   border-radius: 20px;
   padding: 8px 12px;
@@ -125,5 +138,5 @@
 
 /* Mute Button Hover Effect */
 .mute-button:hover {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #C6A846;  /* Accent (Regal Gold) */
 }

@@ -10,7 +10,8 @@
 }
 
 .about {
-  background-color: #000;
+  background-color: #f2f2f2; /* Section background */
+  color: #1C1B1A;            /* Text color */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -37,11 +38,14 @@
   top: -100%; /* Maintained to position images higher, covering "About Me" initially */
   transform: translateY(-100%);
   transition: transform 0.3s ease-out, top 0.3s ease-out; /* Add transition for top */
-  border-radius: 0; /* Removed rounded corners to eliminate borders */
+  border-radius: 20px;; /* Removed rounded corners to eliminate borders */
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 2; /* Images on top initially */
   max-width: 100%; /* Prevent overflow */
+  width: 600px;         /* or use percentage like 30% */
+  height: 900px;        /* Maintain consistent poster aspect ratio */
+  overflow: hidden;
 }
 
 .image-container img {
@@ -71,7 +75,7 @@
   transform: translate(-50%, -50%);
   z-index: 1; /* Behind the images */
   text-align: center;
-  color: #fff;
+  color: #1C1B1A;
   font-family: 'Arial', sans-serif;
   max-width: 100%; /* Prevent overflow */
   margin-top: -5rem;
@@ -99,8 +103,8 @@
 
 .text-content button {
   background: none;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #1C1B1A;
+  color: #1C1B1A;
   padding: 10px 20px;
   border-radius: 20px; /* Rounded corners for button */
   cursor: pointer;
